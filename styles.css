@@ -1006,25 +1006,19 @@ body {
 
 @media (min-width: 768px) {
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (min-width: 1024px) {
     .footer-grid {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
 }
 
 .footer-col-wide {
     grid-column: span 1;
-}
-
-@media (min-width: 1024px) {
-    .footer-col-wide {
-        grid-column: span 2;
-    }
 }
 
 .footer-logo-link {
