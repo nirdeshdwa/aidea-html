@@ -764,6 +764,13 @@ body {
 .mentor-card {
     flex-shrink: 0;
     width: 20rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mentor-card,
+.mentor-card * {
+    text-decoration: none;
 }
 
 .mentor-image-wrapper {
@@ -794,6 +801,7 @@ body {
     margin-bottom: 0.25rem;
     letter-spacing: -0.02em;
     transition: color 0.2s;
+    text-decoration: none;
 }
 
 .mentor-card:hover .mentor-name {
@@ -804,12 +812,14 @@ body {
     font-size: 1rem;
     color: var(--color-gray-600);
     font-weight: 300;
+    text-decoration: none;
 }
 
 .mentor-company {
     font-size: 1rem;
     color: var(--color-gray-600);
     font-weight: 300;
+    text-decoration: none;
 }
 
 .carousel-controls {
@@ -1002,7 +1012,7 @@ body {
 
 @media (min-width: 1024px) {
     .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         gap: 3rem;
     }
 }
