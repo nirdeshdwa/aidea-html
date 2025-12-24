@@ -107,7 +107,11 @@ let isPlaying = true;
 let scrollAmount = 0;
 let animationFrameId = null;
 const scrollSpeed = 0.5;
-const cardWidth = 320; // Approximate card width including gap
+// Card width varies by screen size - adjust dynamically (includes gap)
+const getCardWidth = () => {
+    return window.innerWidth < 768 ? 208 : 352; // 12rem card + 1rem gap on mobile, 20rem card + 2rem gap on desktop
+};
+let cardWidth = getCardWidth();
 
 // Populate mentors carousel
 allMentors.forEach((mentor, index) => {
@@ -132,6 +136,7 @@ allMentors.forEach((mentor, index) => {
 // Auto-scroll function
 function scrollCarousel() {
     if (isPlaying && mentorsCarousel) {
+        cardWidth = getCardWidth(); // Update card width on each frame
         scrollAmount += scrollSpeed;
         mentorsCarousel.scrollLeft = scrollAmount;
 
@@ -166,6 +171,7 @@ playPauseBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
     if (mentorsCarousel) {
+        cardWidth = getCardWidth();
         scrollAmount = Math.max(0, scrollAmount - cardWidth * 2);
         mentorsCarousel.scrollLeft = scrollAmount;
     }
@@ -173,6 +179,7 @@ prevBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
     if (mentorsCarousel) {
+        cardWidth = getCardWidth();
         scrollAmount += cardWidth * 2;
         mentorsCarousel.scrollLeft = scrollAmount;
     }

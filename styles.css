@@ -464,7 +464,7 @@ body {
 /* Section Styles */
 .section {
     position: relative;
-    padding: 5rem 1.5rem;
+    padding: 2rem 1.5rem;
     color: var(--color-black);
 }
 
@@ -477,7 +477,7 @@ body {
 .section-title {
     font-size: 2.25rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     color: var(--color-black);
     letter-spacing: -0.02em;
     display: flex;
@@ -488,6 +488,7 @@ body {
 @media (min-width: 768px) {
     .section-title {
         font-size: 3rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -505,11 +506,18 @@ body {
 
 .grid {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        gap: 2rem;
+    }
 }
 
 .grid-2 {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -521,6 +529,7 @@ body {
 
 .grid-4 {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -540,7 +549,7 @@ body {
 .item-title {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--color-black);
     letter-spacing: -0.02em;
 }
@@ -548,6 +557,7 @@ body {
 @media (min-width: 768px) {
     .item-title {
         font-size: 1.5rem;
+        margin-bottom: 0.75rem;
     }
 }
 
@@ -556,6 +566,7 @@ body {
     color: var(--color-gray-600);
     font-weight: 300;
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -566,7 +577,7 @@ body {
 
 /* Journey Section */
 .journey-grid {
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -636,7 +647,7 @@ body {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
     align-items: center;
 }
 
@@ -745,8 +756,14 @@ body {
 
 /* Mentors Section */
 .mentors-section {
-    padding: 5rem 1.5rem;
+    padding: 2rem 1.5rem;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .mentors-section {
+        padding: 5rem 1.5rem;
+    }
 }
 
 .mentors-carousel-wrapper {
@@ -756,16 +773,28 @@ body {
 
 .mentors-carousel {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     overflow-x: hidden;
     scroll-behavior: auto;
 }
 
+@media (min-width: 768px) {
+    .mentors-carousel {
+        gap: 2rem;
+    }
+}
+
 .mentor-card {
     flex-shrink: 0;
-    width: 20rem;
+    width: 12rem;
     text-decoration: none;
     color: inherit;
+}
+
+@media (min-width: 768px) {
+    .mentor-card {
+        width: 20rem;
+    }
 }
 
 .mentor-card,
@@ -795,7 +824,7 @@ body {
 }
 
 .mentor-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-black);
     margin-bottom: 0.25rem;
@@ -804,22 +833,40 @@ body {
     text-decoration: none;
 }
 
+@media (min-width: 768px) {
+    .mentor-name {
+        font-size: 1.25rem;
+    }
+}
+
 .mentor-card:hover .mentor-name {
     color: var(--color-purple);
 }
 
 .mentor-role {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: var(--color-gray-600);
     font-weight: 300;
     text-decoration: none;
 }
 
+@media (min-width: 768px) {
+    .mentor-role {
+        font-size: 1rem;
+    }
+}
+
 .mentor-company {
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: var(--color-gray-600);
     font-weight: 300;
     text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .mentor-company {
+        font-size: 1rem;
+    }
 }
 
 .carousel-controls {
@@ -851,15 +898,17 @@ body {
 /* Partners & Sponsors */
 .partners-grid,
 .sponsors-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .partners-grid,
     .sponsors-grid {
+        display: flex;
+        flex-wrap: wrap;
         gap: 4rem;
     }
 }
@@ -878,11 +927,19 @@ body {
 
 .partner-logo,
 .sponsor-logo {
-    width: 12rem;
-    height: 6rem;
+    width: 5rem;
+    height: 3rem;
     object-fit: contain;
     opacity: 0.8;
     transition: opacity 0.2s;
+}
+
+@media (min-width: 768px) {
+    .partner-logo,
+    .sponsor-logo {
+        width: 12rem;
+        height: 6rem;
+    }
 }
 
 .partner-link:hover .partner-logo {
